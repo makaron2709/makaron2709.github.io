@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Love Avocado | Ресторан корисної кухні в Харкові</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo" id="siteLogo">
+        <svg class="logo-icon-svg" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M256 32C160 32 96 160 96 320C96 416 168 480 256 480C344 480 416 416 416 320C416 160 352 32 256 32Z" fill="#2D5A27"/>
+          <path d="M256 112C192 112 144 200 144 320C144 384 192 432 256 432C320 432 368 384 368 320C368 200 320 112 256 112Z" fill="#88B04B"/>
+          <circle cx="256" cy="336" r="56" fill="#6D4C41"/>
+        </svg>
+        <span>Live Love Avocado</span>
+      </a>
+      
+      <nav class="nav">
+        <a href="#menu" class="nav-link">Меню</a>
+        <a href="#about" class="nav-link">Про нас</a>
+        <a href="#contacts" class="nav-link">Контакти</a>
+      </nav>
+
+      <button class="cart-btn" id="openCartBtn">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Кошик</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge"><i class="fa-solid fa-location-dot"></i> м. Харків, вул. Сумська, 59</span>
+        <h1>Свіжа, корисна та вишукана їжа</h1>
+        <p>Кожен день готуємо для вас легендарні AVO-боули, авторські сніданки цілий день та корисні десерти без цукру.</p>
+      </div>
+      <div class="hero-card-wrapper">
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Avocado Bowl">
+        </div>
+        <div class="floating-tag">
+          <i class="fa-solid fa-leaf"></i> 100% Organic & Fresh
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories / Filter & Menu Section -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-title">
+        <span class="sub-title">Смачний вибір</span>
+        <h2>Наше Меню</h2>
+        <p>Оберіть улюблені страви та додайте їх до кошика</p>
+      </div>
+
+      <div class="categories">
+        <button class="cat-btn active" data-category="all"><i class="fa-solid fa-border-all"></i> Все</button>
+        <button class="cat-btn" data-category="breakfast"><i class="fa-solid fa-egg"></i> Сніданки</button>
+        <button class="cat-btn" data-category="bowls"><i class="fa-solid fa-bowl-food"></i> Боули & Салати</button>
+        <button class="cat-btn" data-category="burgers"><i class="fa-solid fa-burger"></i> AVO-Бургери</button>
+        <button class="cat-btn" data-category="soups"><i class="fa-solid fa-mug-hot"></i> Супи & Основне</button>
+        <button class="cat-btn" data-category="desserts"><i class="fa-solid fa-cake-candles"></i> Десерти</button>
+        <button class="cat-btn" data-category="drinks"><i class="fa-solid fa-glass-water"></i> Напої</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- JS will render menu items here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-icon"><i class="fa-solid fa-heart"></i></div>
+        <h2>Філософія Live.Love.Avocado</h2>
+        <p>Ми віримо, що здорова їжа має бути не лише корисною, а й неймовірно смачною. Кожна наша страва створюється зі свіжих інгредієнтів з любов'ю до деталей та турботою про ваше самопочуття.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacts">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>Live Love Avocado</h3>
+        <p>Ваш улюблений простір корисної їжі у самому серці Харкова.</p>
+      </div>
+      <div class="footer-col">
+        <h4><i class="fa-solid fa-clock"></i> Графік роботи</h4>
+        <p>Пн - Нд: 09:00 — 21:00</p>
+        <p>Без вихідних</p>
+      </div>
+      <div class="footer-col">
+        <h4><i class="fa-solid fa-phone"></i> Контакти</h4>
+        <p>+38 (099) 123-45-67</p>
+        <p>м. Харків, вул. Сумська, 59 (ст. м. Університет)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© Live Love Avocado Харків. Неофіційний сайт.</p>
+      <div class="easter-egg-container">
+        <button class="easter-egg-btn" id="openGameBtn" title="Секретна гра від автора">🥑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mini Game Modal -->
+  <div class="game-modal-overlay" id="gameModal">
+    <div class="game-card">
+      <div id="gameStartScreen">
+        <h2>🥑 Спіймай Авокадо!</h2>
+        <p>Встигни спіймати 5 прудких авокадо, щоб розблокувати секретну інформацію про автора проєкту!</p>
+        <div class="game-actions">
+          <button class="game-btn game-btn-primary" id="startGameBtn" type="button"><i class="fa-solid fa-play"></i> Розпочати гру</button>
+          <button class="game-btn game-btn-secondary" id="closeGameBtn" type="button">Повернутися на сайт</button>
+        </div>
+      </div>
+
+      <div id="gamePlayScreen" style="display: none;">
+        <div class="game-score" id="gameScoreText" style="display: block;">Спіймано: <span id="scoreVal">0</span> / 5</div>
+        <div class="game-progress-bar">
+          <div class="game-progress-fill" id="progressFill"></div>
+        </div>
+        <div class="game-arena" id="gameArena" style="display: block;">
+          <div class="target-avocado" id="targetAvocado">🥑</div>
+        </div>
+        <button class="game-btn game-btn-secondary" id="cancelGameBtn" type="button">Завершити</button>
+      </div>
+
+      <div id="gameWinScreen" style="display: none;">
+        <div class="author-info-box">
+          <h3>🏆 Блискуча перемога!</h3>
+          <p>Ви чудово впоралися!</p>
+          <hr style="border: 0; border-top: 1px solid #c2e0b8; margin: 15px 0;">
+          <p>Цей сучасний вебсайт створено у середовищі <b>VS Code</b> як підсумковий проєкт:</p>
+          <p style="font-size: 20px; font-weight: 700; color: #2D5A27; margin-top: 10px;">
+            👨‍💻 Автор: Макар Драка
+          </p>
+          <p style="font-size: 14px; color: #555; margin-top: 5px;">
+            🎓 Академія IT STEP (м. Харків)
+          </p>
+        </div>
+        <div class="game-actions" style="margin-top: 20px;">
+          <!-- Кнопка «Грати знову» світла (secondary) -->
+          <button class="game-btn game-btn-secondary" id="restartGameBtn" type="button"><i class="fa-solid fa-rotate-right"></i> Грати знову</button>
+          <!-- Кнопка «На сайт» фірмова зелена (primary) -->
+          <button class="game-btn game-btn-primary" id="exitWinBtn" type="button">На сайт</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Modal Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-cart-shopping"></i> Ваш Кошик</h3>
+      <button class="close-cart" id="closeCartBtn">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer">
+      <!-- Cart items rendered here -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Разом:</span>
+        <span id="cartTotalPrice">0 ₴</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Оформити замовлення</button>
+    </div>
+  </aside>
+
+  <!-- JavaScript logic -->
+  <script>
+    // Menu Data
+    const menuData = [
+      {
+        id: 1,
+        title: "Авокадо-тост з лососем та пашот",
+        category: "breakfast",
+        price: 245,
+        desc: "Хрусткий хліб на заквасці, стиглий авокадо, слабосолений лосось, яйце пашот та мікрозелень.",
+        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 2,
+        title: "Avo-Боул з тигровими креветками",
+        category: "bowls",
+        price: 295,
+        desc: "Тигрові креветки, кіноа, свіжий авокадо, едамаме, огірок, чука та фірмовий горіховий соус.",
+        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 3,
+        title: "AVO Бургер з телятиною",
+        category: "burgers",
+        price: 290,
+        desc: "Фірмовий бургер у половинках стиглого авокадо з кунжутом, соковита котлета з телятини, мариновані огірочки, томати та фірмовий соус.",
+        image: "avoburger-veal.webp"
+      },
+      {
+        id: 4,
+        title: "Сирники з соусом манго-авокадо",
+        category: "breakfast",
+        price: 195,
+        desc: "Ніжні сирники з фермерського сиру, подаються з пюре з манго та авокадо, та свіжими ягодами.",
+        image: "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Боул з тунцем та понзу",
+        category: "bowls",
+        price: 310,
+        desc: "Свіжий тунець, рис заправлений соусом понзу, авокадо, кукурудза, норі та білий кунжут.",
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 6,
+        title: "Крем-суп з брокколі та авокадо",
+        category: "soups",
+        price: 185,
+        desc: "Оксамитовий крем-суп із брокколі, авокадо, кокосових вершків та хрусткого насіння гарбуза.",
+        image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 7,
+        title: "Скрембл з авокадо та страчателлою",
+        category: "breakfast",
+        price: 230,
+        desc: "Ніжний яйцевий скрембл, домашня страчателла, слайси авокадо та тости з цільнозернового хліба.",
+        image: "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 8,
+        title: "Салат з авокадо, запеченим гарбузом та фетою",
+        category: "bowls",
+        price: 215,
+        desc: "Мікс салату, соковитий авокадо, карамелізований гарбуз, сир фета та заправка із гірчично-медового соусу.",
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 9,
+        title: "AVO-Бургер з тунцем та васабі майо",
+        category: "burgers",
+        price: 320,
+        desc: "Стейк тунця medium rare, помідор, листя салату, легкий соус васабі у половинках авокадо.",
+        image: "avoburger-tuna.webp"
+      },
+      {
+        id: 10,
+        title: "Паста з соусом песто та авокадо",
+        category: "soups",
+        price: 250,
+        desc: "Паста з твердих сортів пшениці, домашній соус песто з базиліком, шматочки авокадо та пармезан.",
+        image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 11,
+        title: "RAW Чізкейк з авокадо та лаймом",
+        category: "desserts",
+        price: 165,
+        desc: "Корисний десерт без цукру та глютену з горіховою основою, мусом із авокадо, лайма та кокосового молока.",
+        image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 13,
+        title: "Детокс Смузі Авокадо-Шпинат-Матча",
+        category: "drinks",
+        price: 135,
+        desc: "Потужний заряд вітамінів: авокадо, шпинат, зелене яблуко, чай матча та кокосова вода.",
+        image: "https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 14,
+        title: "Лимонад Авокадо-Огірок-М'ята",
+        category: "drinks",
+        price: 95,
+        desc: "Освіжаючий авторський лимонад із м'якоттю авокадо, свіжим огірком, соком лайма та м'ятою.",
+        image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 15,
+        title: "Матча Латте на кокосовому молоці",
+        category: "drinks",
+        price: 110,
+        desc: "Японський зелений чай матча церемоніального ґатунку на збитому рослинному кокосовому молоці.",
+        image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    let cart = [];
+
+    // DOM Elements
+    const menuGrid = document.getElementById('menuGrid');
+    const cartCount = document.getElementById('cartCount');
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const openCartBtn = document.getElementById('openCartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const cartTotalPrice = document.getElementById('cartTotalPrice');
+    const filterBtns = document.querySelectorAll('.cat-btn');
+
+    // Render Menu Cards
+    function renderMenu(category = 'all') {
+      menuGrid.innerHTML = '';
+      const filtered = category === 'all' ? menuData : menuData.filter(item => item.category === category);
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'food-card';
+        card.innerHTML = `
+          <div class="food-img-wrapper">
+            <img src="${item.image}" alt="${item.title}" class="food-img">
+            <span class="card-badge">${getCategoryName(item.category)}</span>
+          </div>
+          <div class="food-info">
+            <h3 class="food-title">${item.title}</h3>
+            <p class="food-desc">${item.desc}</p>
+            <div class="food-footer">
+              <span class="food-price">${item.price} ₴</span>
+              <button class="add-to-cart-btn" onclick="addToCart(${item.id})">
+                <i class="fa-solid fa-plus"></i> В кошик
+              </button>
+            </div>
+          </div>
+        `;
+        menuGrid.appendChild(card);
+      });
+    }
+
+    function getCategoryName(cat) {
+      const names = {
+        breakfast: 'Сніданок',
+        bowls: 'Боул',
+        burgers: 'AVO-Бургер',
+        soups: 'Основне',
+        desserts: 'Десерт',
+        drinks: 'Напій'
+      };
+      return names[cat] || 'Смачно';
+    }
+
+    // Filter Navigation
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderMenu(btn.dataset.category);
+      });
+    });
+
+    // Cart Functions
+    function addToCart(id) {
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        const product = menuData.find(item => item.id === id);
+        cart.push({ ...product, quantity: 1 });
+      }
+      updateCart();
+      openCart();
+    }
+
+    function changeQuantity(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+
+      item.quantity += delta;
+      if (item.quantity <= 0) {
+        cart = cart.filter(i => i.id !== id);
+      }
+      updateCart();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      updateCart();
+    }
+
+    function updateCart() {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCount.textContent = totalItems;
+
+      const totalSum = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      cartTotalPrice.textContent = `${totalSum} ₴`;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="empty-cart">
+            <i class="fa-solid fa-basket-shopping empty-icon"></i>
+            <p>Ваш кошик порожній</p>
+            <small>Додайте щось смачненьке з меню!</small>
+          </div>`;
+        return;
+      }
+
+      cartItemsContainer.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.title}">
+          <div class="cart-item-info">
+            <div class="cart-item-title">${item.title}</div>
+            <div class="cart-item-price">${item.price} ₴</div>
+            <div class="cart-item-qty">
+              <button class="qty-btn" onclick="changeQuantity(${item.id}, -1)">-</button>
+              <span>${item.quantity}</span>
+              <button class="qty-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
+            </div>
+          </div>
+          <button class="remove-btn" onclick="removeFromCart(${item.id})" title="Видалити">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // Modal Control
+    function openCart() {
+      cartSidebar.classList.add('open');
+      cartOverlay.classList.add('open');
+    }
+
+    function closeCart() {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('open');
+    }
+
+    openCartBtn.addEventListener('click', openCart);
+    closeCartBtn.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Кошик порожній! Оберіть страву.');
+      } else {
+        alert('Дякуємо за замовлення! Менеджер зв’яжеться з вами.');
+        cart = [];
+        updateCart();
+        closeCart();
+      }
+    });
+
+    // --- Пасхалка: Звук поезда играет ТОЛЬКО пока курсор на логотипе ---
+    const logo = document.getElementById('siteLogo');
+    const trainAudio = new Audio('train.mp3');
+
+    if (logo) {
+      logo.addEventListener('mouseenter', () => {
+        trainAudio.currentTime = 0;
+        trainAudio.play().catch(error => {
+          console.log("Браузер заблокировал автовоспроизведение звука до первого клика по странице.");
+        });
+      });
+
+      logo.addEventListener('mouseleave', () => {
+        trainAudio.pause();
+        trainAudio.currentTime = 0;
+      });
+    }
+
+    // --- Функция генерации звука клика по авокадо (Web Audio API) ---
+    function playPopSound() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(500, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + 0.12);
+        
+        gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.12);
+        
+        osc.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.12);
+      } catch (e) {
+        // Браузер может заблокировать звук
+      }
+    }
+
+    // --- Міні-гра «Слови Авокадо» ---
+    const gameModal = document.getElementById('gameModal');
+    const openGameBtn = document.getElementById('openGameBtn');
+    const closeGameBtn = document.getElementById('closeGameBtn');
+    const startGameBtn = document.getElementById('startGameBtn');
+    const cancelGameBtn = document.getElementById('cancelGameBtn');
+    const exitWinBtn = document.getElementById('exitWinBtn');
+    const restartGameBtn = document.getElementById('restartGameBtn');
+
+    const gameStartScreen = document.getElementById('gameStartScreen');
+    const gamePlayScreen = document.getElementById('gamePlayScreen');
+    const gameWinScreen = document.getElementById('gameWinScreen');
+    
+    const targetAvocado = document.getElementById('targetAvocado');
+    const scoreVal = document.getElementById('scoreVal');
+    const gameArena = document.getElementById('gameArena');
+    const progressFill = document.getElementById('progressFill');
+
+    let score = 0;
+    let autoMoveTimer = null;
+
+    if (openGameBtn) {
+      openGameBtn.addEventListener('click', () => {
+        resetGame();
+        gameModal.classList.add('open');
+      });
+    }
+
+    if (closeGameBtn) {
+      closeGameBtn.addEventListener('click', () => {
+        gameModal.classList.remove('open');
+        clearTimeout(autoMoveTimer);
+      });
+    }
+
+    if (cancelGameBtn) {
+      cancelGameBtn.addEventListener('click', () => {
+        resetGame();
+        gameModal.classList.remove('open');
+        clearTimeout(autoMoveTimer);
+      });
+    }
+
+    if (exitWinBtn) {
+      exitWinBtn.addEventListener('click', () => {
+        gameModal.classList.remove('open');
+      });
+    }
+
+    if (restartGameBtn) {
+      restartGameBtn.addEventListener('click', () => {
+        resetGame();
+        startNewGame();
+      });
+    }
+
+    if (startGameBtn) {
+      startGameBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        startNewGame();
+      });
+    }
+
+    if (targetAvocado) {
+      targetAvocado.addEventListener('click', () => {
+        score++;
+        updateScoreUI();
+        playPopSound();
+
+        if (score >= 5) {
+          clearTimeout(autoMoveTimer);
+          gamePlayScreen.style.display = 'none';
+          gameWinScreen.style.display = 'block';
+        } else {
+          moveAvocado();
+        }
+      });
+    }
+
+    function startNewGame() {
+      if (gameStartScreen) gameStartScreen.style.display = 'none';
+      if (gameWinScreen) gameWinScreen.style.display = 'none';
+      if (gamePlayScreen) gamePlayScreen.style.display = 'block';
+      score = 0;
+      updateScoreUI();
+      moveAvocado();
+    }
+
+    function updateScoreUI() {
+      if (scoreVal) scoreVal.textContent = score;
+      if (progressFill) progressFill.style.width = (score / 5 * 100) + '%';
+    }
+
+    function moveAvocado() {
+      clearTimeout(autoMoveTimer);
+      if (!gameArena || !targetAvocado) return;
+
+      const maxX = gameArena.clientWidth - 60;
+      const maxY = gameArena.clientHeight - 60;
+      const randomX = Math.floor(Math.random() * Math.max(maxX, 10));
+      const randomY = Math.floor(Math.random() * Math.max(maxY, 10));
+      
+      const randomRotate = Math.floor(Math.random() * 360);
+      const randomScale = (0.8 + Math.random() * 0.5).toFixed(2);
+
+      targetAvocado.style.left = randomX + 'px';
+      targetAvocado.style.top = randomY + 'px';
+      targetAvocado.style.transform = `rotate(${randomRotate}deg) scale(${randomScale})`;
+
+      const speed = Math.max(800, 1600 - (score * 150));
+      autoMoveTimer = setTimeout(moveAvocado, speed);
+    }
+
+    function resetGame() {
+      if (gameStartScreen) gameStartScreen.style.display = 'block';
+      if (gamePlayScreen) gamePlayScreen.style.display = 'none';
+      if (gameWinScreen) gameWinScreen.style.display = 'none';
+      score = 0;
+      if (progressFill) progressFill.style.width = '0%';
+      clearTimeout(autoMoveTimer);
+    }
+
+    // Initial Load
+    renderMenu();
+  </script>
+</body>
+</html>
